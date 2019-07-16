@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+  <head>
+    <title>Lab2: Data Types and Variables</title>
+    <style>
+      body, html {
+        color: white;
+        background-color: black;
+      }
+    </style>
+    <script>
+      function myFunction(){
+        var sumNums = prompt("Please Enter Your Student ID.");
+        var familyName = prompt("Please enter your family (last) name?");
+        var nLet = familyName.length;
+        var myId = 0;
+        for (var i = 0; i < sumNums.length; i++) {
+          temp = sumNums.substring(i, i+1);
+          myId += parseInt(temp, 10);
+        }
+        
+        var expression1 = myId / 2;
+        var expression2 = myId % 2;
+        //Below: Looping through all of the values before nLet
+        var expression3 = 0;
+        for (var j = 2; j <= nLet + 1; j++){
+          expression3 += j;
+        }
+        var expression4 = myId + nLet;
+        var expression5 = nLet++;
+        var expression6 = nLet * 1;
+        var expression7 = (nLet % nLet) && (myId * myId);
+        var expression8 = 0 || (myId / 0);
+        var expression9 = 1 || (myId / 0);
+        
+        //Large print of items
+        document.write("My family name is " + familyName + "<br>");
+        document.write("My student ID is " + sumNums + "<br>");
+        document.write("The value of myId is " + myId + "<br>");
+        document.write("The number of characters in my last name is " + nLet + "<br>");
+        document.write("Expression #1 -------------: " + expression1 + "<br>");
+        document.write("Expression #2 -------------: " + expression2 + "<br>");
+        document.write("Expression #3 -------------: " + expression3 + "<br>");
+        document.write("Expression #4 -------------: " + expression4 + "<br>");
+        document.write("Expression #5 -------------: " + expression5 + "<br>");
+        document.write("Expression #6 -------------: " + expression6 + "<br>");
+        document.write("Expression #7 -------------: " + expression7 + "<br>");
+        document.write("Expression #8 -------------: " + expression8 + "<br>");
+        document.write("Expression #9 -------------: " + expression9);
+      }
+    </script>
+  </head>
+  
+  <body onload="myFunction()">
+  </body>
