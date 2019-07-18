@@ -22,10 +22,10 @@
       var hours = Number(prompt("What is the total number of hours worked (or is considering working) this week?"));
       
       function buttonFunc() {
-        while (rate == "NaN") { //Checks if each value is not a number (aka NaN)
+        while (rate === "NaN") { //Checks if each value is not a number (aka NaN)
           rate = Number(prompt("Please enter a number that is the employee's rate per hour."));
         }
-        while (hours == "NaN") {
+        while (hours === "NaN") {
           hours = Number(prompt("Please enter a number that is the amount of hours worked this week."));
         }
         if (rate < 20 && hours >= 40) {
