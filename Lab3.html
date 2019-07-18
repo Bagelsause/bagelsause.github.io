@@ -2,8 +2,32 @@
   <head>
     <title></title>
     <script>
-      var rate = prompt("Hello this is a test.");
-      document.write(rate);
+      var rate = Number(prompt("What is the employees rate per hour?"));
+      var hours = Number(prompt("What is the total number of hours worked (or is considering working) this week?"));
+      
+      function buttonFunc() {
+        if (rate < 20) {
+          if (hours >= 40) {
+            var total = 1.5 * (hours * rate);
+            document.write(total);
+          }
+          else {
+            var total = (hours * rate);
+            document.write(total);
+          }
+        }
+        else {
+          var total = (hours * rate);
+          document.write(total);
+        }
+      }
+      var button = document.createElement("button");
+      button.innerHTML = "Calculate the Total Hours Worked?"; //Creating the button needed for the program
+      var body = document.getElementsByTagName("body")[0];
+      body.appendChild(button);
+      button.addEventListener ("click", function() { //What does the button actually do when clicked?
+        buttonFunc();
+      });
     </script>
   </head>
   
