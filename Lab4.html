@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+  <head>
+    <title>Lab 4: Body Mass Index Calculator</title>
+    <style>
+      html {
+        background-color = black;
+      }
+      
+      
+      body {
+        padding: 20px;
+      }
+      
+      button {
+        margin-top: 50vh;
+        line-height: 60px;
+        font-weight: bold;
+        padding: 0 40px;
+        background: gray;
+        border: none;
+      }
+      button:hover {
+        background: white;
+      }
+    
+      
+    </style>
+    <script>
+      function bmiCalc() {
+        //Initializing variables
+        var height = prompt( "Please enter your height in the format of (feet)'(inches)\" below, if you are at a constant height of, as example, 4 feet, mark as 4'0\"." );
+        var weight = prompt( "Please enter your weight in pounds below." );
+        var feet = 0;
+        var inches = 0;
+        var counterImportant = 0;
+        var totalBMI = 0;
+        
+        //Starting script
+        counter = height.indexOf("\'");
+        feet = Number(height.substring(0,counter));
+        counter2 = height.indexOf("\"");
+        inches = Number(height.substring(counter + 1, counter2));
+        alert(feet);
+        alert(inches + "inches");
+        
+        //Starting calculations
+        feet *= 12;
+        alert(feet + "feet in inches");
+        alert(inches + "before adding");
+        inches = feet + inches;
+        alert(inches + "height in total");
+        alert(weight);
+        totalBMI = (weight * 703) / (inches * inches);
+        document.write(totalBMI);
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="bmiCalc()");>Want to see your BMI? Click here to find out!</button>
+    <!--If you see this, thanks for teaching this class!-->
+  </body>
+</html>
