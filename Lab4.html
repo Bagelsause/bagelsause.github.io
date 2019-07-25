@@ -13,6 +13,7 @@
       
       button {
         margin-top: 50vh;
+        margin-left: 50vh;
         line-height: 60px;
         font-weight: bold;
         padding: 0 40px;
@@ -40,17 +41,17 @@
         feet = Number(height.substring(0,counter));
         counter2 = height.indexOf("\"");
         inches = Number(height.substring(counter + 1, counter2));
-        alert(feet);
-        alert(inches + "inches");
         
         //Starting calculations
         feet *= 12;
-        alert(feet + "feet in inches");
-        alert(inches + "before adding");
         inches = feet + inches;
-        alert(inches + "height in total");
-        alert(weight);
         totalBMI = (weight * 703) / (inches * inches);
+        
+        //Starting weird calculations
+        totalBMI *= 100;
+        totalBMI = parseInt(totalBMI); //Just save the numbers previous and the two decimal places
+        totalBMI = parseFloat(totalBMI);
+        totalBMI /= 100; //Get rid of all of the pesky remaining decimals
         document.write(totalBMI);
       }
     </script>
