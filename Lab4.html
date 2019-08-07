@@ -51,11 +51,11 @@
           }
           index = height.indexOf("\'");
           var test = height.substring(0, index);
-          if ( (Number.isNaN(test)) ){
+          if ( !(Number.isNaN(test)) ){
             var index2 = height.indexOf("\"");
             var test2 = height.substring(index + 1, index2);
-            if ( (Number.isNaN(test2)) ) {
-              if ( (Number.isNaN(weight)) ){
+            if ( !(Number.isNaN(test2)) ) {
+              if ( !(Number.isNaN(weight)) ){
                 break;
               }
             }
