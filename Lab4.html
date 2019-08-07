@@ -6,14 +6,37 @@
         background-color = black;
       }
       
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #111;
+      }
+
+      li {
+        float: left;
+      }
+
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      li a:hover {
+        background-color: #ADD8E6;
+      }
       
       body {
         padding: 20px;
       }
       
       button {
-        margin-top: 50vh;
-        margin-left: 50vw;
+        margin-top: 40%;
+        margin-left: 40%;
         line-height: 60px;
         font-weight: bold;
         padding: 0 40px;
@@ -83,6 +106,12 @@
     </script>
   </head>
   <body>
+    <ul>
+      <li><a class="active" href="https://bagelsause.github.io/Lab4.html">Lab #4</a></li>
+      <li><a href="https://bagelsause.github.io/Lab3.html">Lab #3</a></li>
+      <li><a href="https://bagelsause.github.io/Lab2.html">Lab #2</a></li>
+      <li><a href="https://bagelsause.github.io/index.html">Lab #1</a></li>
+    </ul>
     <button onclick="bmiCalc()">Want to see your BMI? Click here to find out!</button>
     <!--If you see this, thanks for teaching this class!-->
   </body>
