@@ -3,7 +3,36 @@
     <title></title>
     <style>
       body {
-        padding: 20px;
+        padding: 0px;
+      }
+      .active {
+        background-color: #333;
+        color: white;
+      }
+      
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #111;
+      }
+
+      li {
+        float: left;
+      }
+
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      li a:hover {
+        background-color: #ADD8E6;
+        color: black;
       }
       button {
         margin-top: 20px;
@@ -42,6 +71,12 @@
   </head>
   
   <body>
+    <ul>
+      <li><a href="https://bagelsause.github.io/Lab4.html">Lab #4</a></li>
+      <li><a class="active" href="https://bagelsause.github.io/Lab3.html">Lab #3</a></li>
+      <li><a href="https://bagelsause.github.io/Lab2.html">Lab #2</a></li>
+      <li><a href="https://bagelsause.github.io/index.html">Lab #1</a></li>
+    </ul>
     <button onclick="buttonFunc()">Want to Calculate the Rate Per Week?</button>
   </body>
 </html>
