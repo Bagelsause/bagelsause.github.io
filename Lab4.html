@@ -29,16 +29,43 @@
     <script>
       function bmiCalc() {
         //Initializing variables
-        var height = prompt( "Please enter your height in the format of (feet)'(inches)\" below, if you are at a constant height of, as example, 4 feet, mark as 4'0\"." );
-        var weight = prompt( "Please enter your weight in pounds below." );
+        var height = 0;
+        var weight = 0;
         var feet = 0;
         var inches = 0;
-        var counterImportant = 0;
+        var counter = 0;
+        var counter2 = 0;
         var totalBMI = 0;
+        var i = 0;
+        var testCondition = false;
+        var index = 0;
+        
+        while (true) {
+          if (i = 0) {
+            height = prompt( "Please enter your height in the format of (feet)'(inches)\" below, if you are at a constant height of, as example, 4 feet, mark as 4'0\"." );
+            weight = prompt( "Please enter your weight in pounds below." );
+          }
+          else {
+            height = prompt( "Please re-enter your height in the format of (feet)'(inches)\" below, if you are at a constant height of, as example, 4 feet, mark as 4'0\"." );
+            weight = prompt( "Please re-enter your weight in pounds below." );
+            i++;
+          }
+          index = height.indexOf("\'");
+          var test = height.substring(0, index);
+          if ( !(Number.isNaN(test)) ){
+            var index2 = height.indexOf("\"");
+            var test2 = height.substring(index + 1, index2);
+            if ( !(Number.isNaN(test2)) ) {
+              if ( !(Number.isNaN(weight)) ){
+                break;
+              }
+            }
+          }
+        }
         
         //Starting script
+        feet = parseInt(height, 10);
         counter = height.indexOf("\'");
-        feet = Number(height.substring(0,counter));
         counter2 = height.indexOf("\"");
         inches = Number(height.substring(counter + 1, counter2));
         
